@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVSmart | Emergency</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <a class="brand" href="/">⚡ EV<span>Smart</span></a>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/planner">Trip Planner</a>
+        <a href="/charging">Charging</a>
+        <a href="/battery">Battery</a>
+        <a href="/emergency">Emergency</a>
+    </nav>
+</header>
+
+<main>
+<section class="page-head">
+    <p class="eyebrow">EV EMERGENCY ASSISTANT</p>
+    <h1>Low battery? Stay calm.</h1>
+    <p>Use this prototype to decide your next action when the battery is running low.</p>
+</section>
+
+<div class="emergency-box">
+    <div class="warning-icon">🚨</div>
+    <h2>Critical Battery Assistance</h2>
+    <label>Current battery (%)</label>
+    <input id="emergencyBattery" type="number" min="0" max="100" value="12">
+    <button class="btn danger full" onclick="emergencyCheck()">Check Emergency Status</button>
+    <div id="emergencyResult" class="notice">Enter your current battery level.</div>
+</div>
+
+<div class="cards small-cards">
+    <div class="card"><span>1️⃣</span><h3>Reduce speed</h3><p>Drive smoothly and avoid unnecessary acceleration.</p></div>
+    <div class="card"><span>2️⃣</span><h3>Find a charger</h3><p>Use the charging finder to locate a reachable station.</p></div>
+    <div class="card"><span>3️⃣</span><h3>Get assistance</h3><p>If the vehicle cannot safely reach a charger, contact roadside assistance.</p></div>
+</div>
+</main>
+
+<footer>
+    <p>⚡ EVSmart — Intelligent Electric Vehicle Travel Assistant</p>
+</footer>
+<script src="/static/js/script.js"></script>
+</body>
+</html>

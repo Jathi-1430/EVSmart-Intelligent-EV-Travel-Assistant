@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVSmart | Trip Planner</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <a class="brand" href="/">⚡ EV<span>Smart</span></a>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/planner">Trip Planner</a>
+        <a href="/charging">Charging</a>
+        <a href="/battery">Battery</a>
+        <a href="/emergency">Emergency</a>
+    </nav>
+</header>
+
+<main>
+<section class="page-head">
+    <p class="eyebrow">TRIP PLANNER</p>
+    <h1>Plan your EV journey</h1>
+    <p>Enter your trip details to estimate whether your EV has enough range.</p>
+</section>
+
+<section class="form-grid">
+    <div class="panel">
+        <label>Start location</label>
+        <input id="start" placeholder="e.g. Phagwara">
+
+        <label>Destination</label>
+        <input id="destination" placeholder="e.g. Chandigarh">
+
+        <label>Current battery (%)</label>
+        <input id="battery" type="number" min="1" max="100" value="80">
+
+        <label>EV efficiency (km per 1% battery)</label>
+        <input id="efficiency" type="number" min="1" step="0.1" value="5">
+
+        <button class="btn primary full" onclick="calculateRange()">Calculate Range</button>
+    </div>
+
+    <div class="result-panel">
+        <div class="big-icon">🔋</div>
+        <h2 id="rangeResult">— km</h2>
+        <p>Estimated available driving range</p>
+        <div id="tripMessage" class="notice">Enter your details and calculate.</div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>⚡ EVSmart — Intelligent Electric Vehicle Travel Assistant</p>
+</footer>
+<script src="/static/js/script.js"></script>
+</body>
+</html>

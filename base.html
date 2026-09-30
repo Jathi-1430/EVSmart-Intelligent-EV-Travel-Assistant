@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}EVSmart{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="navbar">
+    <a class="brand" href="{{ url_for('index') }}">⚡ EV<span>Smart</span></a>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('planner') }}">Trip Planner</a>
+        <a href="{{ url_for('charging') }}">Charging</a>
+        <a href="{{ url_for('battery') }}">Battery</a>
+        <a href="{{ url_for('emergency') }}">Emergency</a>
+    </nav>
+</header>
+
+<main>{% block content %}{% endblock %}</main>
+
+<footer>
+    <p>⚡ EVSmart — Intelligent Electric Vehicle Travel Assistant</p>
+</footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

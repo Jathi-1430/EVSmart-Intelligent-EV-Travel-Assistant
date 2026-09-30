@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVSmart | Battery Health</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<header class="navbar">
+    <a class="brand" href="/">⚡ EV<span>Smart</span></a>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/planner">Trip Planner</a>
+        <a href="/charging">Charging</a>
+        <a href="/battery">Battery</a>
+        <a href="/emergency">Emergency</a>
+    </nav>
+</header>
+
+<main>
+<section class="page-head">
+    <p class="eyebrow">BATTERY HEALTH</p>
+    <h1>Check your EV battery</h1>
+    <p>A simple rule-based estimate for the prototype. ML prediction can be added in the next version.</p>
+</section>
+
+<section class="form-grid">
+    <div class="panel">
+        <label>Battery capacity (kWh)</label>
+        <input id="capacity" type="number" value="40">
+
+        <label>Charging cycles</label>
+        <input id="cycles" type="number" value="350">
+
+        <label>Average battery temperature (°C)</label>
+        <input id="temperature" type="number" value="30">
+
+        <button class="btn primary full" onclick="batteryHealth()">Check Health</button>
+    </div>
+
+    <div class="result-panel">
+        <div class="big-icon">🔋</div>
+        <h2 id="healthResult">—%</h2>
+        <p>Estimated battery health</p>
+        <div id="healthMessage" class="notice">Enter battery information.</div>
+    </div>
+</section>
+</main>
+
+<footer>
+    <p>⚡ EVSmart — Intelligent Electric Vehicle Travel Assistant</p>
+</footer>
+<script src="/static/js/script.js"></script>
+</body>
+</html>
